@@ -1,0 +1,33 @@
+<form role="form" name="snippet" ng-init="submitted = false">
+  <div ng-class="{ 'form-group': true,
+      'has-error': submitted && !snippet.snippetAuthor.$valid }">
+    <label for="snippetAuthor">Author</label>
+    <input type="text" id="snippetAuthor" name="snippetAuthor"
+      class="form-control" placeholder="Your name here"
+      ng-model="snippet.author" required />
+  </div>
+  <div ng-class="{ 'form-group': true,
+      'has-error': submitted && !snippet.snippetTitle.$valid }">
+    <label for="snippetTitle">Snippet name</label>
+    <input type="text" id="snippetTitle" name="snippetTitle"
+      class="form-control" ng-model="snippet.title" required />
+  </div>
+  <div ng-class="{ 'form-group': true,
+      'has-error': submitted && !snippet.snippetDescription.$valid }">
+    <label for="snippetDescription">Snippet description</label>
+    <textarea id="snippetDescription" name="snippetDescription"
+      class="form-control" rows="2"
+      ng-model="snippet.description" required></textarea>
+  </div>
+  <div ng-class="{ 'form-group': true,
+      'has-error': submitted && !snippet.snippetContent.$valid }">
+    <label for="snippetContent">Snippet content</label>
+    <textarea id="snippetContent" name="snippetContent"
+      class="form-control code-area" rows="5"
+      ng-model="snippet.content" required></textarea>
+  </div>
+  <div clas="form-group">
+    <button type="submit" class="btn btn-primary"
+      ng-click="addSnippet(snippet)">Add snippet</button>
+  </div>
+</form>

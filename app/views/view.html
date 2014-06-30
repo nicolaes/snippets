@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h3>
+      {{ snippet.title  }}
+      <a href="#/home" class="go-back">
+        <span class="glyphicon glyphicon-arrow-left"></span>
+        Back to all snippets
+      </a>
+    </h3>
+
+    <p><em>by <strong>{{ snippet.author }}</strong></em></p>
+  </div>
+</div>
+<div class="row code-display">
+  <div class="col-sm-8">
+    <pre class="snippet-container">{{ snippet.content }}</pre>
+  </div>
+  <div class="col-sm-4">
+    <h5>
+      <span class="glyphicon glyphicon-pencil"></span> 
+      Description
+    </h5>
+    <p>{{ snippet.description }}</p>
+    <h5>
+      <span class="glyphicon glyphicon-time"></span>
+      Created on {{ snippet.created | date:short }}
+    </h5>
+  </div>
+</div>

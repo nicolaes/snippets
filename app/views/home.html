@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Author</th>
+      <th>Created on</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="snippet in snippets | orderByPriority | reverse">
+      <td>{{ snippet.title }}</td>
+      <td>{{ snippet.description }}</td>
+      <td>{{ snippet.author }}</td>
+      <td>{{ snippet.created | date: short }}</td>
+      <td><a class="btn btn-default" ng-href="#/view/{{ snippet.$id }}">
+        View code</a></td>
+    </tr>
+  </tbody>
+</table> 

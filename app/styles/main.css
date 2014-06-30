@@ -1,0 +1,11 @@
+body {
+  padding-top: 50px;
+}
+.template {
+  padding: 40px 15px;
+}
+
+h3 {margin-top: 0;}
+a.go-back {font-size: 14px; padding-left: 20px; line-height: 26px;}
+.code-area { font-family: Consolas, Lucida Console, monospace; }
+.code-display { margin-top: 15px;}
