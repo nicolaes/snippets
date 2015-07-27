@@ -1,8 +1,6 @@
 Snippet Manager
 ===============
 
-Live demo [here](http://snippets.stihhi.ro/) (minified version)
-
 Prerequisites for local installation
 `npm install -g bower grunt-cli`
 
